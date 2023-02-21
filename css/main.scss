@@ -36,15 +36,77 @@ body{
     column-gap: 35px;
     min-height: 116px;
     align-items: center;
+    @include max-screen(998.98px){
+      min-height: 80px;
+    }
+    .header__logo{
+      img{
+        @include max-screen(390px){
+          width: 100px;
+        }
+        @include max-screen(360px){
+          width: 80px;
+        }
+        @include max-screen(320px){
+          width: 40px;
+        }
+      }
+    }
     .header__menu{
       flex: 1 1 auto;
       .menu__list{
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
+        @include max-screen(767.98px){
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          margin-top: 30px;
+        }
       }
     }
     .icon-menu{
       display: none;
+      @include max-screen(767.98px){
+        display: block;
+        flex: 0 0 30px;
+        height: 18px;
+        position: relative;
+        z-index: 9;
+        background-color: transparent;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      span,
+      &:before,
+      &:after{
+        @include max-screen(767.98px){
+          content: '';
+          right: 0;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #FFFFFF;
+        }
+      }
+      &:before{
+        @include max-screen(767.98px){
+          top: 0;
+        }
+      }
+      &:after{
+        @include max-screen(767.98px){
+          bottom: 0;
+        }
+      }
+      span{
+        @include max-screen(767.98px){
+          top: 45%;
+          color: #FFFFFF;
+        }
+      }
     }
     .header__button{
       flex: 0 0 auto;
@@ -62,6 +124,12 @@ body{
       }
       @include max-screen(998.98px){
         padding: 15px 20px;
+      }
+      @include max-screen(560px){
+        padding: 5px 10px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        font-size: 12px;
       }
     }
     @include max-screen(998.98px){
@@ -81,6 +149,12 @@ body{
     @include max-screen(998.98px){
       margin-left: 20px;
     }
+    @include max-screen(767.98px){
+      font-size: 26px;
+    }
+  }
+  @include max-screen(767.98px){
+    margin-bottom: 20px;
   }
 }
 .header__cart{
@@ -88,6 +162,9 @@ body{
     font-size: 18px;
     line-height: 28px;
     color: #FFFFFF;
+    @include max-screen(560px){
+      display: none;
+    }
   }
   .cart-header_quantyty{
     font-weight: 500;
@@ -97,6 +174,17 @@ body{
     background: rgba(129, 129, 139, 0.3);
     border-radius: 30px;
     padding: 5px 8px;
+    @include max-screen(560px){
+      text-align: center;
+      font-size: 10px;
+      line-height: 10px;
+      width: 26px;
+      height: 30px;
+      padding-top: 14px;
+      padding-left: 6px;
+      border-radius: 0;
+      background: url("../img/shopping-bag-svgrepo-com.svg") center / auto 100% no-repeat;
+    }
   }
   &:hover{
     .cart-header__text{
@@ -108,4 +196,21 @@ body{
   display: flex;
   gap: 5px;
   align-items: center;
+}
+.menu__body{
+  @include max-screen(767.98px){
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    top: 0;
+    padding: 100px 15px 30px 15px;
+  }
+}
+.header__logo,
+.header__cart,
+.header__button{
+  position: relative;
+  z-index: 2;
 }

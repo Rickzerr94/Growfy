@@ -36,15 +36,83 @@ body {
   min-height: 116px;
   align-items: center;
 }
+@media screen and (max-width: 998.98px) {
+  .header .header__container {
+    min-height: 80px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .header .header__container .header__logo img {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header .header__container .header__logo img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header .header__container .header__logo img {
+    width: 40px;
+  }
+}
 .header .header__container .header__menu {
   flex: 1 1 auto;
 }
 .header .header__container .header__menu .menu__list {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767.98px) {
+  .header .header__container .header__menu .menu__list {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 .header .header__container .icon-menu {
   display: none;
+}
+@media screen and (max-width: 767.98px) {
+  .header .header__container .icon-menu {
+    display: block;
+    flex: 0 0 30px;
+    height: 18px;
+    position: relative;
+    z-index: 9;
+    background-color: transparent;
+  }
+  .header .header__container .icon-menu:hover {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header .header__container .icon-menu span, .header .header__container .icon-menu:before, .header .header__container .icon-menu:after {
+    content: "";
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header .header__container .icon-menu:before {
+    top: 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header .header__container .icon-menu:after {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header .header__container .icon-menu span {
+    top: 45%;
+    color: #FFFFFF;
+  }
 }
 .header .header__container .header__button {
   flex: 0 0 auto;
@@ -64,6 +132,14 @@ body {
 @media screen and (max-width: 998.98px) {
   .header .header__container .header__button {
     padding: 15px 20px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header .header__container .header__button {
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 998.98px) {
@@ -86,11 +162,26 @@ body {
     margin-left: 20px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .menu__item .menu__link {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .menu__item {
+    margin-bottom: 20px;
+  }
+}
 
 .header__cart .cart-header__text {
   font-size: 18px;
   line-height: 28px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 560px) {
+  .header__cart .cart-header__text {
+    display: none;
+  }
 }
 .header__cart .cart-header_quantyty {
   font-weight: 500;
@@ -101,6 +192,19 @@ body {
   border-radius: 30px;
   padding: 5px 8px;
 }
+@media screen and (max-width: 560px) {
+  .header__cart .cart-header_quantyty {
+    text-align: center;
+    font-size: 10px;
+    line-height: 10px;
+    width: 26px;
+    height: 30px;
+    padding-top: 14px;
+    padding-left: 6px;
+    border-radius: 0;
+    background: url("../img/shopping-bag-svgrepo-com.svg") center/auto 100% no-repeat;
+  }
+}
 .header__cart:hover .cart-header__text {
   text-decoration: underline;
 }
@@ -109,6 +213,25 @@ body {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+@media screen and (max-width: 767.98px) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    top: 0;
+    padding: 100px 15px 30px 15px;
+  }
+}
+
+.header__logo,
+.header__cart,
+.header__button {
+  position: relative;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=main.css.map */
