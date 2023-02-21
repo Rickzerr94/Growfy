@@ -28,8 +28,16 @@ body {
 
 .page {
   flex: 1 1 auto;
+  padding-top: 110px;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(13, 13, 17, 0.55);
+}
 .header .header__container {
   display: flex;
   column-gap: 35px;
@@ -51,7 +59,7 @@ body {
     width: 80px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 359.98px) {
   .header .header__container .header__logo img {
     width: 40px;
   }
@@ -96,6 +104,7 @@ body {
     width: 100%;
     height: 2px;
     background-color: #FFFFFF;
+    transition: all 0.3s ease 0s;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -221,9 +230,21 @@ body {
     width: 100%;
     height: 100%;
     background-color: black;
-    left: 0;
+    left: -100%;
     top: 0;
     padding: 100px 15px 30px 15px;
+    overflow: auto;
+    transition: left 0.3s ease 0s;
+  }
+  .menu__body:before {
+    content: "";
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 70px;
+    background-color: black;
+    transition: left 0.3s ease 0s;
   }
 }
 
@@ -232,6 +253,24 @@ body {
 .header__button {
   position: relative;
   z-index: 2;
+}
+
+.menu-open .menu__body {
+  left: 0;
+}
+.menu-open .menu__body:before {
+  left: 0;
+}
+.menu-open .header__container .icon-menu span {
+  width: 0;
+}
+.menu-open .header__container .icon-menu:before {
+  top: 45%;
+  transform: rotate(-45deg);
+}
+.menu-open .header__container .icon-menu:after {
+  bottom: 45%;
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=main.css.map */
