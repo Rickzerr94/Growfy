@@ -36,7 +36,8 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(13, 13, 17, 0.83);
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(13, 13, 17, 0.9892331933) 40%, rgba(13, 13, 17, 0.9528186275) 66%, rgba(13, 13, 17, 0.8379726891) 78%, rgba(13, 13, 17, 0.5494572829) 89%, rgba(13, 13, 17, 0.0424544818) 98%);
 }
 .header .header__container {
   display: flex;
@@ -46,22 +47,15 @@ body {
 }
 @media screen and (max-width: 998.98px) {
   .header .header__container {
-    min-height: 80px;
+    min-height: 90px;
   }
 }
 @media screen and (max-width: 390px) {
   .header .header__container .header__logo img {
-    width: 100px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .header .header__container .header__logo img {
-    width: 80px;
-  }
-}
-@media screen and (max-width: 359.98px) {
-  .header .header__container .header__logo img {
-    width: 40px;
+    content: "";
+    background-image: url("../img/logo2.svg");
+    width: 32px;
+    height: 32px;
   }
 }
 .header .header__container .header__menu {
@@ -308,6 +302,17 @@ body {
   line-height: 61px;
   color: #FFFFFF;
   margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+.marketing .marketing__container .marketing__title h1:before {
+  content: "";
+  width: 122px;
+  height: 122px;
+  background-image: url("../img/div.svg");
+  position: absolute;
+  top: -16px;
+  left: -31px;
 }
 .marketing .marketing__container .marketing__title p {
   font-size: 18px;
@@ -358,6 +363,35 @@ body {
 }
 .marketing .marketing__container .marketing__images img {
   margin-top: 32px;
+}
+
+.clients {
+  padding: 190px 0 160px;
+}
+.clients .clients__container .clients__text {
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 45px;
+}
+.clients .clients__container .clients__slider {
+  font-style: normal;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1152px;
+}
+.clients .clients__container .clients__slider img {
+  width: 160px;
+  margin: auto;
+}
+
+.slick-slider {
+  margin: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
