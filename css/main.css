@@ -56,7 +56,7 @@ h3 {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 13;
+  z-index: 99;
   background: linear-gradient(180deg, rgba(13, 13, 17, 0.9892331933) 40%, rgba(13, 13, 17, 0.9528186275) 66%, rgba(13, 13, 17, 0.8379726891) 78%, rgba(13, 13, 17, 0.5494572829) 89%, rgba(13, 13, 17, 0.0424544818) 98%);
 }
 .header .header__container {
@@ -576,6 +576,7 @@ h3 {
   max-width: 611px;
   width: 100%;
   position: relative;
+  z-index: 5;
 }
 .choose .choose__container .choose__image-container:before {
   content: "";
@@ -585,6 +586,7 @@ h3 {
   position: absolute;
   bottom: 8px;
   left: -13px;
+  z-index: 4;
 }
 .choose .choose__container .choose__text {
   max-width: 608px;
@@ -635,6 +637,80 @@ h3 {
   position: absolute;
   top: -4px;
   left: -42px;
+}
+
+.numbers {
+  padding: 192px 0 96px;
+}
+.numbers .numbers__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 860px) {
+  .numbers .numbers__container {
+    justify-content: center;
+  }
+}
+.numbers .numbers__container .numbers__text {
+  max-width: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+@media screen and (max-width: 860px) {
+  .numbers .numbers__container .numbers__text {
+    gap: 20px;
+    order: 2;
+  }
+}
+@media screen and (max-width: 429px) {
+  .numbers .numbers__container .numbers__text {
+    justify-content: center;
+  }
+}
+.numbers .numbers__container .numbers__text .numbers__text-container {
+  max-width: 358px;
+  width: 100%;
+  min-height: 278px;
+  background-color: rgba(129, 129, 139, 0.1);
+  border-radius: 30px;
+  padding: 40px;
+}
+.numbers .numbers__container .numbers__text .numbers__text-container .numbers__text-head {
+  margin-bottom: 32px;
+}
+.numbers .numbers__container .numbers__text .numbers__text-container .numbers__text-content {
+  font-size: 18px;
+  line-height: 27px;
+}
+.numbers .numbers__container .numbers__image {
+  display: inline-block;
+  background-image: url("../img/smile-man.png");
+  max-width: 500px;
+  width: 100%;
+  min-height: 588px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 860px) {
+  .numbers .numbers__container .numbers__image {
+    order: 1;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 429px) {
+  .numbers .numbers__container .numbers__image {
+    margin-bottom: 15px;
+    min-height: 500px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .numbers .numbers__container .numbers__image {
+    min-height: 420px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
