@@ -24,13 +24,6 @@ const settingSlider = {
         {
             breakpoint: 480,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 390,
-            settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
             }
@@ -41,3 +34,4 @@ const settingSlider = {
 $(document).ready(function (){
     $('.clients__slider').slick(settingSlider);
 })
+

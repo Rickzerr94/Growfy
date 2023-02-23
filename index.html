@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Growfy</title>
 
@@ -52,7 +53,9 @@
     <main class="page">
         <section class="marketing">
             <div class="marketing__container">
-                <div class="marketing__title">
+                <div data-aos="zoom-in"
+                     data-aos-delay="2000"
+                     data-aos-duration="1000" class="marketing__title">
                     <h1>Marketing solutions that grow your business.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.</p>
                     <a href="#">Our services</a>
@@ -60,12 +63,15 @@
                 </div>
                 <div class="marketing__images">
                     <div class="marketing__images-block1">
-                        <img src="img/image-1.png" alt="image-1">
-                        <img src="img/image-2.png" alt="image-2">
+                        <img data-aos="fade-down" src="img/image-1.png" alt="image-1">
+                        <img data-aos="fade-right"
+                             data-aos-delay="1500" src="img/image-2.png" alt="image-2">
                     </div>
                     <div class="marketing__images-block2">
-                        <img src="img/image-3.png" alt="image-3">
-                        <img src="img/image-4.png" alt="image-4">
+                        <img data-aos="fade-left"
+                             data-aos-delay="500" src="img/image-3.png" alt="image-3">
+                        <img data-aos="fade-up"
+                             data-aos-delay="1000" src="img/image-4.png" alt="image-4">
                     </div>
                 </div>
             </div>
@@ -75,34 +81,74 @@
                 <h2 class="clients__text">TRUSTED BY startups and large enterprises</h2>
                 <div class="clients__slider">
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-1.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-1.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-2.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-2.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-3.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-3.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-4.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-4.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-5.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-5.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-1.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-1.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-2.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-2.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-3.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-3.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-4.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-4.svg" alt="image"></a>
                     </div>
                     <div class="clients__slider-item">
-                        <img src="img/slider/Group-5.svg" alt="image">
+                        <a href=""><img src="img/slider/Group-5.svg" alt="image"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="services__container">
+                <div class="services__text">
+                    <p class="services__text-label">services</p>
+                    <h2 class="services__text-head">Services we offer</h2>
+                    <p class="services__text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.</p>
+                    <a href="" class="services__text-button">All services</a>
+                </div>
+                <div class="services__blocks">
+                    <div class="services__blocks-item">
+                        <div class="services__blocks-image">
+                            <img src="img/services/div-(1).svg" alt="">
+                        </div>
+                        <h4 class="services__blocks-head">Social Media Marketing</h4>
+                        <p class="services__blocks-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit.</p>
+                    </div>
+                    <div class="services__blocks-item">
+                        <div class="services__blocks-image">
+                            <img src="img/services/div-(2).svg" alt="">
+                        </div>
+                        <h4 class="services__blocks-head">Paid Advertising</h4>
+                        <p class="services__blocks-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit.</p>
+                    </div>
+                    <div class="services__blocks-item">
+                        <div class="services__blocks-image">
+                            <img src="img/services/div-(3).svg" alt="">
+                        </div>
+                        <h4 class="services__blocks-head">Email Marketing</h4>
+                        <p class="services__blocks-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit.</p>
+                    </div>
+                    <div class="services__blocks-item">
+                        <div class="services__blocks-image">
+                            <img src="img/services/div-(4).svg" alt="">
+                        </div>
+                        <h4 class="services__blocks-head">SEO Optimization</h4>
+                        <p class="services__blocks-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit.</p>
                     </div>
                 </div>
             </div>
@@ -115,9 +161,14 @@
     <footer class="footer">
 
     </footer>
+
 </div>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({disable: 'mobile'});
+</script>
 </body>
 </html>
